@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Obando Test</string>
+    <string name="Common_loading">Loading</string>
+    <string name="home_tab">Weather</string>
+    <string name="data_tab">Data</string>
+    <string name="summary_not_found">Summary not found</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="timezone">Timezone</string>
+    <string name="daily">Daily</string>
+    <string name="last3Days">Last 3 days</string>
+    <string name="day1">Day 1</string>
+    <string name="day2">Day 2</string>
+    <string name="day3">Day 3</string>
+</resources>

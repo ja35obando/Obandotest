@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.view.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerData"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:outlineSpotShadowColor="@color/cardShadow"
+            android:layout_margin="@dimen/dimen_20dp"
+            app:cardBackgroundColor="@color/cardViewMessage"
+            app:cardCornerRadius="@dimen/dimen_20dp"
+            app:cardElevation="@dimen/dimen_5dp"
+            app:strokeWidth="@dimen/dimen_2dp"
+            app:strokeColor="@color/blue_light"
+            tools:ignore="UnusedAttribute"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen_10dp">
+
+                <ImageView
+                    android:id="@+id/chevronImageView"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:src="@drawable/ic_chevron_right"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/app_name"
+                    app:tint="@color/bundlesLegendNumbersBackground"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/latitude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/latitude"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/TextSize.Callout"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/latitudeValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/dimen_2dp"
+                    android:text="@string/latitude"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/TextSize.Callout"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/latitude"
+                    app:layout_constraintEnd_toStartOf="@id/chevronImageView"/>
+
+                <TextView
+                    android:id="@+id/longitude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/longitude"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/TextSize.Callout"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintTop_toBottomOf="@id/latitude"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/longitudeValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/dimen_2dp"
+                    android:text="@string/longitude"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/TextSize.Callout"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintTop_toBottomOf="@id/latitudeValue"
+                    app:layout_constraintStart_toEndOf="@id/longitude"
+                    app:layout_constraintEnd_toStartOf="@id/chevronImageView"/>
+
+                <TextView
+                    android:id="@+id/timezone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/timezone"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/TextSize.Callout"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintTop_toBottomOf="@id/longitude"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/timezoneValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/dimen_2dp"
+                    android:text="@string/timezone"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/TextSize.Callout"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintTop_toBottomOf="@id/longitudeValue"
+                    app:layout_constraintStart_toEndOf="@id/timezone"
+                    app:layout_constraintEnd_toStartOf="@id/chevronImageView"/>
+
+                <TextView
+                    android:id="@+id/daily"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/daily"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/TextSize.Callout"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintTop_toBottomOf="@id/timezone"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/dailyValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/dimen_2dp"
+                    android:text="@string/daily"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/TextSize.Callout"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintTop_toBottomOf="@id/timezoneValue"
+                    app:layout_constraintStart_toEndOf="@id/daily"
+                    app:layout_constraintEnd_toStartOf="@id/chevronImageView"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/summary_not_found"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

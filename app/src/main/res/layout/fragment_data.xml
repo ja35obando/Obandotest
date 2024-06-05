@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.data.view.DataFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:outlineSpotShadowColor="@color/cardShadow"
+        android:layout_margin="@dimen/dimen_20dp"
+        app:cardBackgroundColor="@color/cardViewMessage"
+        app:cardCornerRadius="@dimen/dimen_20dp"
+        app:cardElevation="@dimen/dimen_5dp"
+        app:strokeWidth="@dimen/dimen_2dp"
+        app:strokeColor="@color/blue_light"
+        tools:ignore="UnusedAttribute"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_10dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/last3Days"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/TextSize.Callout"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/day1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/day1"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/TextSize.Callout"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/dimen_10dp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/day1Value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginHorizontal="@dimen/dimen_2dp"
+                android:text="@string/day1"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/TextSize.Callout"
+                android:layout_margin="@dimen/dimen_10dp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintStart_toEndOf="@id/day1"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/day2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/day2"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/TextSize.Callout"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/dimen_10dp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/day1"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/day2Value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginHorizontal="@dimen/dimen_2dp"
+                android:text="@string/day2"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/TextSize.Callout"
+                android:layout_margin="@dimen/dimen_10dp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/day1Value"
+                app:layout_constraintStart_toEndOf="@id/day2"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/day3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/day3"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/TextSize.Callout"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/dimen_10dp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/day2"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/day3Value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginHorizontal="@dimen/dimen_2dp"
+                android:text="@string/day3"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/TextSize.Callout"
+                android:layout_margin="@dimen/dimen_10dp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/day2Value"
+                app:layout_constraintStart_toEndOf="@id/day3"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
